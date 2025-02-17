@@ -28,7 +28,27 @@ namespace bai8_pheptinhcoban_radiobutton
             double so2 = double.Parse(txtso2.Text);
             if (rdbcong.Checked )
             {
-                txtKQ.Text =()
+                txtKQ.Text =(so1 + so2).ToString();
+            }
+            if (rdbtru.Checked)
+            {
+                txtKQ.Text = (so1 - so2).ToString();
+            }
+            if (rdbnhan.Checked)
+            {
+                txtKQ.Text = (so1 * so2).ToString();
+            }
+            if (rdbchia.Checked)
+            {
+                if (so2 == 0)
+                {
+                    txtKQ.Text = "lỗi chia 0";
+                }
+                else
+                {
+                    txtKQ.Text =(so1 / so2).ToString();
+                }
+
             }
         }
     }
